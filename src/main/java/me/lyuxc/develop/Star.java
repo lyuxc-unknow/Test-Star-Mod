@@ -57,7 +57,6 @@ public class Star {
         iEventBus.addListener(DataGeneration::generate);
         //事件总线注册
         MinecraftForge.EVENT_BUS.register(this);
-        System.out.println(CREATIVE_KEY);
     }
 
 }
