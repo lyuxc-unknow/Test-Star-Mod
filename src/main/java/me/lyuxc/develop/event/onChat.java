@@ -15,7 +15,6 @@ public class onChat {
     public static void onServerChatEvent(ServerChatEvent event) {
         ServerPlayer player = event.getPlayer();
         String chatMessage = event.getMessage().getString();
-        String a  = "a";
         if(chatMessage.equals("新手礼包")) {
             event.setMessage(Component.empty());
             //提示1
