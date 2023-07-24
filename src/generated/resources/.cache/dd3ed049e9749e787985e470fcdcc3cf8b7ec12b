@@ -1,0 +1,5 @@
+// 1.20.1	2023-07-01T18:17:52.592429	Block States: test_star
+c9bb10c45aba79796e291a17ab0e5c813e3b9d7e assets/test_star/blockstates/example_block.json
+d4738fdb7930edf44205a1b1890d62beea64a28c assets/test_star/blockstates/star_block.json
+d3f8e5d04d5e75d76c64e8d66d03d3235784cbd2 assets/test_star/models/block/example_block.json
+2d7c342ad1337e3b03645c8effca219ff685ab81 assets/test_star/models/block/star_block.json
