@@ -58,5 +58,4 @@ public class Star {
         //事件总线注册
         MinecraftForge.EVENT_BUS.register(this);
     }
-
 }
