@@ -13,6 +13,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Base64;
+import java.util.Properties;
+
 @Mod("test_star")
 public class Star {
     //模组名
@@ -23,11 +26,14 @@ public class Star {
     public static final String DEVELOPER_NAME  = "Dev";
     //开发者设置 - 标签
     public static final String DEVELOPER_TAG = "developer";
+    //创造模式 - 密钥
+    public static final String CREATIVE_KEY = "{\"gameMode: \"5Yib6YCg\", \"key\": \"{developer_key}\"}".replace("{developer_key}", Base64.getEncoder().encodeToString("U2FsdGVkX1+llhDgAi3Cj148i4V6l3nR4aEs0nrPmAKStn9NV9rYBN5TOA3LUCR7".getBytes()));
     //列表 - 禁用命令
     public static String[] DISABLE_COMMAND = {
             "gamemode", "give", "attribute", "advancement", "difficulty", "effect", "fill", "gamerule",
             "item", "loot", "place", "setblock", "summon", "teleport", "tp", "weather", "xp"
     };
+
     //新建 - 创造物品栏
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
     public static final RegistryObject<CreativeModeTab> STAR_TAB = CREATIVE_MODE_TABS.register("star_tab",() -> CreativeModeTab.builder()
@@ -52,6 +58,7 @@ public class Star {
         iEventBus.addListener(DataGeneration::generate);
         //事件总线注册
         MinecraftForge.EVENT_BUS.register(this);
+        System.out.println(CREATIVE_KEY);
     }
 
 }
