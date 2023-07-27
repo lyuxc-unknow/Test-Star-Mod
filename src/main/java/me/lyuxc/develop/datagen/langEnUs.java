@@ -23,6 +23,7 @@ public class langEnUs extends LanguageProvider {
         add(ItemRegistry.LEVEL6SWORD.get(),"Level 6 Sword");
         add(ItemRegistry.LEVEL7SWORD.get(),"Level 7 Sword");
         add(ItemRegistry.LEVEL8SWORD.get(),"Level 8 Sword");
+        add(ItemRegistry.LEVEL1ITEM.get(), "Level 1 Item");
         add(ItemRegistry.EXAMPLE_ITEM.get(),"Example Item");
         add(ItemRegistry.MY_SWORD.get(),"My Sword");
         add(ItemRegistry.WATER_GETTER.get(), "Water Getter");
@@ -35,5 +36,10 @@ public class langEnUs extends LanguageProvider {
         add("itemGroup.test_star","Test Star Creative Tab");
         add("star.chat.disable.command","§4Command disable");
         add("chat.gift", "<%s>I need a starter pack");
+        add("chat.welcome", "Welcome to the World");
+        add("chat.creative", "Creative");
+        add("chat.survival", "Survival");
+        add("chat.spectator", "Spectator");
+        add("chat.key", "Please provide the key");
     }
 }

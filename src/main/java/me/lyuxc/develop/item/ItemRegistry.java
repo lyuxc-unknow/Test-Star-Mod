@@ -1,19 +1,16 @@
 package me.lyuxc.develop.item;
 
 import me.lyuxc.develop.Star;
-import me.lyuxc.develop.item.items.ArmorBoot;
 import me.lyuxc.develop.item.items.EndItem;
 import me.lyuxc.develop.item.items.GravitationalMagneticField;
 import me.lyuxc.develop.item.items.WaterGetter;
 import me.lyuxc.develop.item.tools.*;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.apache.http.config.Registry;
 
 public class ItemRegistry {
     //物品
@@ -38,6 +35,8 @@ public class ItemRegistry {
     public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item",() -> new Item(new Item.Properties()));
     //无铭者の剑
     public static final RegistryObject<Item> MY_SWORD = ITEMS.register("my_sword", MySword::new);
+    //一级物品
+    public static final RegistryObject<Item> LEVEL1ITEM = ITEMS.register("LEVEL_ONE_ITEM".toLowerCase(), () -> new Item(new Item.Properties()));
     //水汽收集器
     public static final RegistryObject<Item> WATER_GETTER = ITEMS.register("water_getter", () -> new WaterGetter(new Item.Properties()
             .stacksTo(1)
@@ -76,6 +75,7 @@ public class ItemRegistry {
             event.accept(MY_SWORD);
             event.accept(WATER_GETTER);
             event.accept(END_ITEM);
+            event.accept(LEVEL1ITEM);
 //            event.accept(boot_gr);
             event.accept(GravitationalMagneticField);
         }

@@ -15,7 +15,7 @@ public class langZhCn extends LanguageProvider {
     @Override
     protected void addTranslations() {
         //物品
-        add(ItemRegistry.LEVEL1SWORD.get(),"一级剑");
+        add(ItemRegistry.LEVEL1SWORD.get(),"侵蚀像素剑");
         add(ItemRegistry.LEVEL2SWORD.get(),"二级剑");
         add(ItemRegistry.LEVEL3SWORD.get(),"三级剑");
         add(ItemRegistry.LEVEL4SWORD.get(),"四级剑");
@@ -23,6 +23,7 @@ public class langZhCn extends LanguageProvider {
         add(ItemRegistry.LEVEL6SWORD.get(),"六级剑");
         add(ItemRegistry.LEVEL7SWORD.get(),"七级剑");
         add(ItemRegistry.LEVEL8SWORD.get(),"八级剑");
+        add(ItemRegistry.LEVEL1ITEM.get(), "侵蚀像素");
         add(ItemRegistry.EXAMPLE_ITEM.get(),"测试物品");
         add(ItemRegistry.MY_SWORD.get(),"无铭者的剑");
         add(ItemRegistry.WATER_GETTER.get(), "水汽捕获装置");
@@ -34,6 +35,11 @@ public class langZhCn extends LanguageProvider {
         //自定义
         add("itemGroup.test_star","试星辰物品栏");
         add("star.chat.disable.command","§4该命令已被管理员禁用");
-        add("chat.gift", "<%s>我需要一份新手礼包");
+        add("chat.gift", "<System>被侵蚀的剑已给与开发者");
+        add("chat.welcome", "世界或许依旧，但变化无处不在，开发者，欢迎你！");
+        add("chat.creative", "已入侵至管理员权限");
+        add("chat.survival", "已回归正常模式");
+        add("chat.spectator", "已入侵至旁观模式");
+        add("chat.key", "请提供密钥");
     }
 }
