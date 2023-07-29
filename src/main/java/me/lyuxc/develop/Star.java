@@ -20,7 +20,7 @@ public class Star {
     //模组名
     public static final String MOD_ID = "test_star";
     //最大玩家血量
-    public static double MAX_HEALTH = 40;
+    public static double MAX_HEALTH = 80;
     //开发者设置 - 名字
     public static final String DEVELOPER_NAME  = "Dev";
     //开发者设置 - 标签

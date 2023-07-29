@@ -16,6 +16,6 @@ public class Level1Sword extends SwordItem {
     //是否可以攻击（破坏）方块
     @Override
     public boolean canAttackBlock(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Player player) {
-        return true;
+        return false;
     }
 }
