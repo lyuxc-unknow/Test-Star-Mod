@@ -77,6 +77,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> GazeOfCapital = ITEMS.register("gaze_of_capital", () -> new GazeOfCapital(new Item.Properties()
             .stacksTo(1)
     ));
+    //精神粮食
     public static final RegistryObject<Item> SPIRITUALFOOD = ITEMS.register("spiritual_food", () -> new SpiritualFood(new Item.Properties()
             .stacksTo(16)
             .food(new FoodProperties.Builder()
