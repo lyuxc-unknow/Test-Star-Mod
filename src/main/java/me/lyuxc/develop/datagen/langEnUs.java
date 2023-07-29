@@ -24,6 +24,13 @@ public class langEnUs extends LanguageProvider {
         add(ItemRegistry.LEVEL7SWORD.get(),"Level 7 Sword");
         add(ItemRegistry.LEVEL8SWORD.get(),"Level 8 Sword");
         add(ItemRegistry.LEVEL1ITEM.get(), "Level 1 Item");
+        add(ItemRegistry.LEVEL2ITEM.get(), "Level 2 Item");
+        add(ItemRegistry.LEVEL3ITEM.get(), "Level 3 Item");
+        add(ItemRegistry.LEVEL4ITEM.get(), "Level 4 Item");
+        add(ItemRegistry.LEVEL5ITEM.get(), "Level 5 Item");
+        add(ItemRegistry.LEVEL6ITEM.get(), "Level 6 Item");
+        add(ItemRegistry.LEVEL7ITEM.get(), "Level 7 Item");
+        add(ItemRegistry.LEVEL8ITEM.get(), "Level 8 Item");
         add(ItemRegistry.EXAMPLE_ITEM.get(),"Example Item");
         add(ItemRegistry.MY_SWORD.get(),"My Sword");
         add(ItemRegistry.WATER_GETTER.get(), "Water Getter");

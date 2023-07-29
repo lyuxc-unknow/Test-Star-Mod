@@ -36,7 +36,21 @@ public class ItemRegistry {
     //无铭者の剑
     public static final RegistryObject<Item> MY_SWORD = ITEMS.register("my_sword", MySword::new);
     //一级物品
-    public static final RegistryObject<Item> LEVEL1ITEM = ITEMS.register("LEVEL_ONE_ITEM".toLowerCase(), () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LEVEL1ITEM = ITEMS.register("level_one_item", () -> new Item(new Item.Properties()));
+    //二级物品
+    public static final RegistryObject<Item> LEVEL2ITEM = ITEMS.register("level_two_item", () -> new Item(new Item.Properties()));
+    //三级物品
+    public static final RegistryObject<Item> LEVEL3ITEM = ITEMS.register("level_three_item", () -> new Item(new Item.Properties()));
+    //四级物品
+    public static final RegistryObject<Item> LEVEL4ITEM = ITEMS.register("level_four_item", () -> new Item(new Item.Properties()));
+    //五级物品
+    public static final RegistryObject<Item> LEVEL5ITEM = ITEMS.register("level_five_item", () -> new Item(new Item.Properties()));
+    //六级物品
+    public static final RegistryObject<Item> LEVEL6ITEM = ITEMS.register("level_six_item", () -> new Item(new Item.Properties()));
+    //七级物品
+    public static final RegistryObject<Item> LEVEL7ITEM = ITEMS.register("level_seven_item", () -> new Item(new Item.Properties()));
+    //八级物品
+    public static final RegistryObject<Item> LEVEL8ITEM = ITEMS.register("level_eight_item", () -> new Item(new Item.Properties()));
     //水汽收集器
     public static final RegistryObject<Item> WATER_GETTER = ITEMS.register("water_getter", () -> new WaterGetter(new Item.Properties()
             .stacksTo(1)
@@ -76,6 +90,13 @@ public class ItemRegistry {
             event.accept(WATER_GETTER);
             event.accept(END_ITEM);
             event.accept(LEVEL1ITEM);
+            event.accept(LEVEL2ITEM);
+            event.accept(LEVEL3ITEM);
+            event.accept(LEVEL4ITEM);
+            event.accept(LEVEL5ITEM);
+            event.accept(LEVEL6ITEM);
+            event.accept(LEVEL7ITEM);
+            event.accept(LEVEL8ITEM);
 //            event.accept(boot_gr);
             event.accept(GravitationalMagneticField);
         }

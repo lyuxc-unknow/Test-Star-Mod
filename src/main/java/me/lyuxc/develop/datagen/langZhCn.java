@@ -16,14 +16,21 @@ public class langZhCn extends LanguageProvider {
     protected void addTranslations() {
         //物品
         add(ItemRegistry.LEVEL1SWORD.get(),"侵蚀像素剑");
-        add(ItemRegistry.LEVEL2SWORD.get(),"二级剑");
-        add(ItemRegistry.LEVEL3SWORD.get(),"三级剑");
-        add(ItemRegistry.LEVEL4SWORD.get(),"四级剑");
-        add(ItemRegistry.LEVEL5SWORD.get(),"五级剑");
-        add(ItemRegistry.LEVEL6SWORD.get(),"六级剑");
-        add(ItemRegistry.LEVEL7SWORD.get(),"七级剑");
-        add(ItemRegistry.LEVEL8SWORD.get(),"八级剑");
+        add(ItemRegistry.LEVEL2SWORD.get(),"坍塌剑");
+        add(ItemRegistry.LEVEL3SWORD.get(),"群星光点合金剑");
+        add(ItemRegistry.LEVEL4SWORD.get(),"注入了曦绫量子的合金剑");
+        add(ItemRegistry.LEVEL5SWORD.get(),"附加了超凌粒子的合金剑");
+        add(ItemRegistry.LEVEL6SWORD.get(),"聚合了恒星离子的合金剑");
+        add(ItemRegistry.LEVEL7SWORD.get(),"拥有了构建行星力量的合金剑");
+        add(ItemRegistry.LEVEL8SWORD.get(),"分离·统一·物质剑");
         add(ItemRegistry.LEVEL1ITEM.get(), "侵蚀像素");
+        add(ItemRegistry.LEVEL2ITEM.get(), "坍塌数据");
+        add(ItemRegistry.LEVEL3ITEM.get(), "群星光点");
+        add(ItemRegistry.LEVEL4ITEM.get(), "曦绫量子");
+        add(ItemRegistry.LEVEL5ITEM.get(), "超凌粒子");
+        add(ItemRegistry.LEVEL6ITEM.get(), "恒星离子");
+        add(ItemRegistry.LEVEL7ITEM.get(), "拟·行星构建公式");
+        add(ItemRegistry.LEVEL8ITEM.get(), "拟态·世界物质");
         add(ItemRegistry.EXAMPLE_ITEM.get(),"测试物品");
         add(ItemRegistry.MY_SWORD.get(),"无铭者的剑");
         add(ItemRegistry.WATER_GETTER.get(), "水汽捕获装置");
@@ -33,7 +40,7 @@ public class langZhCn extends LanguageProvider {
         add(BlockRegistry.EXAMPLE_BLOCK_ITEM.get(),"测试方块");
         add(BlockRegistry.STAR_BLOCK_ITEM.get(),"行星方块");
         //自定义
-        add("itemGroup.test_star","试星辰物品栏");
+        add("itemGroup.test_star","[Test Star]物品栏");
         add("star.chat.disable.command","§4该命令已被管理员禁用");
         add("chat.gift", "<System>被侵蚀的剑已给与开发者");
         add("chat.welcome", "世界或许依旧，但变化无处不在，开发者，欢迎你！");
