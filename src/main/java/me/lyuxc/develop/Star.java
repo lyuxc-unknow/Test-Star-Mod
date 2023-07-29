@@ -20,13 +20,15 @@ public class Star {
     //模组名
     public static final String MOD_ID = "test_star";
     //最大玩家血量
-    public static double MAX_HEALTH = 50;
+    public static double MAX_HEALTH = 40;
     //开发者设置 - 名字
     public static final String DEVELOPER_NAME  = "Dev";
     //开发者设置 - 标签
     public static final String DEVELOPER_TAG = "developer";
-    //创造模式 - 密钥
-    public static final String CREATIVE_KEY = "{\"gameMode: \"5Yib6YCg\", \"key\": \"{developer_key}\"}".replace("{developer_key}", Base64.getEncoder().encodeToString("U2FsdGVkX1+llhDgAi3Cj148i4V6l3nR4aEs0nrPmAKStn9NV9rYBN5TOA3LUCR7".getBytes()));
+    //开发者密钥 - AES - developer
+    public static final String DEVELOPER_KEY = "U2FsdGVkX1+llhDgAi3Cj148i4V6l3nR4aEs0nrPmAKStn9NV9rYBN5TOA3LUCR7";
+    //创造模式切换 - 密钥
+    public static final String CREATIVE_KEY = "{\"gameMode: \"5Yib6YCg\", \"key\": \"{developer_key}\"}".replace("{developer_key}", Base64.getEncoder().encodeToString(DEVELOPER_KEY.getBytes()));
     //列表 - 禁用命令
     public static String[] DISABLE_COMMAND = {
             "gamemode", "give", "attribute", "advancement", "difficulty", "effect", "fill", "gamerule",
