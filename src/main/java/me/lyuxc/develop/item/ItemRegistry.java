@@ -5,6 +5,7 @@ import me.lyuxc.develop.item.items.EndItem;
 import me.lyuxc.develop.item.items.GravitationalMagneticField;
 import me.lyuxc.develop.item.items.WaterGetter;
 import me.lyuxc.develop.item.tools.*;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -63,6 +64,17 @@ public class ItemRegistry {
     public static final RegistryObject<Item> GravitationalMagneticField = ITEMS.register("gravitational_magnetic_field", () -> new GravitationalMagneticField(new Item.Properties()
             .stacksTo(1)
     ));
+    //阿尔法·医疗箱
+    public static final RegistryObject<Item> MedicalBox = ITEMS.register("alpha_medical_box", () -> new AlphaMedicalBox(new Item.Properties()
+            .stacksTo(16)
+            .food(new FoodProperties.Builder()
+                    .fast()
+                    .alwaysEat()
+                    .nutrition(10)
+                    .saturationMod(10)
+                    .build()
+            )
+    ));
     //废案 -- 重力靴
 //    public static final RegistryObject<Item> boot_gr = ITEMS.register("boot_gr", () -> new ArmorBoot.Boots(new Item.Properties()));
 
@@ -97,6 +109,7 @@ public class ItemRegistry {
             event.accept(LEVEL6ITEM);
             event.accept(LEVEL7ITEM);
             event.accept(LEVEL8ITEM);
+            event.accept(MedicalBox);
 //            event.accept(boot_gr);
             event.accept(GravitationalMagneticField);
         }

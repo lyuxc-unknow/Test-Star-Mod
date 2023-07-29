@@ -35,6 +35,7 @@ public class ItemModelDataGeneration extends ItemModelProvider {
         basicItem(ItemRegistry.LEVEL6ITEM.get());
         basicItem(ItemRegistry.LEVEL7ITEM.get());
         basicItem(ItemRegistry.LEVEL8ITEM.get());
+        basicItem(ItemRegistry.MedicalBox.get());
         basicItem(ItemRegistry.EXAMPLE_ITEM.getId());
         basicItem(ItemRegistry.MY_SWORD.getId());
         basicItem(ItemRegistry.WATER_GETTER.getId());

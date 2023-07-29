@@ -32,6 +32,7 @@ public class langEnUs extends LanguageProvider {
         add(ItemRegistry.LEVEL7ITEM.get(), "Level 7 Item");
         add(ItemRegistry.LEVEL8ITEM.get(), "Level 8 Item");
         add(ItemRegistry.EXAMPLE_ITEM.get(),"Example Item");
+        add(ItemRegistry.MedicalBox.get(), "Alpha Medical Box");
         add(ItemRegistry.MY_SWORD.get(),"My Sword");
         add(ItemRegistry.WATER_GETTER.get(), "Water Getter");
         add(ItemRegistry.END_ITEM.get(), "End Item");
