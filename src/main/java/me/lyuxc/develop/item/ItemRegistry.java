@@ -1,9 +1,7 @@
 package me.lyuxc.develop.item;
 
 import me.lyuxc.develop.Star;
-import me.lyuxc.develop.item.items.EndItem;
-import me.lyuxc.develop.item.items.GravitationalMagneticField;
-import me.lyuxc.develop.item.items.WaterGetter;
+import me.lyuxc.develop.item.items.*;
 import me.lyuxc.develop.item.tools.*;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
@@ -17,23 +15,23 @@ public class ItemRegistry {
     //物品
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Star.MOD_ID);
     //一级剑
-    public static final RegistryObject<Item> LEVEL1SWORD =  ITEMS.register("level_one_sword",() -> new Level1Sword(new Item.Properties()));
+    public static final RegistryObject<Item> LEVEL1SWORD = ITEMS.register("level_one_sword", () -> new Level1Sword(new Item.Properties()));
     //二级剑
-    public static final RegistryObject<Item> LEVEL2SWORD = ITEMS.register("level_two_sword",() -> new Level2Sword(new Item.Properties()));
+    public static final RegistryObject<Item> LEVEL2SWORD = ITEMS.register("level_two_sword", () -> new Level2Sword(new Item.Properties()));
     //三级剑
-    public static final RegistryObject<Item> LEVEL3SWORD = ITEMS.register("level_three_sword",() -> new Level3Sword(new Item.Properties()));
+    public static final RegistryObject<Item> LEVEL3SWORD = ITEMS.register("level_three_sword", () -> new Level3Sword(new Item.Properties()));
     //四级剑
-    public static final RegistryObject<Item> LEVEL4SWORD = ITEMS.register("level_four_sword",() -> new Level4Sword(new Item.Properties()));
+    public static final RegistryObject<Item> LEVEL4SWORD = ITEMS.register("level_four_sword", () -> new Level4Sword(new Item.Properties()));
     //五级剑
-    public static final RegistryObject<Item> LEVEL5SWORD = ITEMS.register("level_five_sword",() -> new Level5Sword(new Item.Properties()));
+    public static final RegistryObject<Item> LEVEL5SWORD = ITEMS.register("level_five_sword", () -> new Level5Sword(new Item.Properties()));
     //六级剑
-    public static final RegistryObject<Item> LEVEL6SWORD = ITEMS.register("level_six_sword",() -> new Level6Sword(new Item.Properties()));
+    public static final RegistryObject<Item> LEVEL6SWORD = ITEMS.register("level_six_sword", () -> new Level6Sword(new Item.Properties()));
     //七级剑
-    public static final RegistryObject<Item> LEVEL7SWORD = ITEMS.register("level_seven_sword",() -> new Level7Sword(new Item.Properties()));
+    public static final RegistryObject<Item> LEVEL7SWORD = ITEMS.register("level_seven_sword", () -> new Level7Sword(new Item.Properties()));
     //八级剑
-    public static final RegistryObject<Item> LEVEL8SWORD = ITEMS.register("level_eight_sword",() -> new Level8Sword(new Item.Properties()));
+    public static final RegistryObject<Item> LEVEL8SWORD = ITEMS.register("level_eight_sword", () -> new Level8Sword(new Item.Properties()));
     //测试物品
-    public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item",() -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item", () -> new Item(new Item.Properties()));
     //无铭者の剑
     public static final RegistryObject<Item> MY_SWORD = ITEMS.register("my_sword", MySword::new);
     //一级物品
@@ -75,10 +73,22 @@ public class ItemRegistry {
                     .build()
             )
     ));
+    //资本家的目光
+    public static final RegistryObject<Item> GazeOfCapital = ITEMS.register("gaze_of_capital", () -> new GazeOfCapital(new Item.Properties()
+            .stacksTo(1)
+    ));
+    public static final RegistryObject<Item> SPIRITUALFOOD = ITEMS.register("spiritual_food", () -> new SpiritualFood(new Item.Properties()
+            .stacksTo(16)
+            .food(new FoodProperties.Builder()
+                    .alwaysEat()
+                    .nutrition(21)
+                    .build()
+            )
+    ));
     //废案 -- 重力靴
 //    public static final RegistryObject<Item> boot_gr = ITEMS.register("boot_gr", () -> new ArmorBoot.Boots(new Item.Properties()));
 
-//    static String[] items_id = new String[] {
+    //    static String[] items_id = new String[] {
 //            "example_item"
 //    };
 //    static void addReg() {
@@ -88,7 +98,7 @@ public class ItemRegistry {
 //    }
     //添加到模组的创造物品栏
     public static void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTab() == Star.STAR_TAB.get()) {
+        if (event.getTab() == Star.STAR_TAB.get()) {
             event.accept(LEVEL1SWORD);
             event.accept(LEVEL2SWORD);
             event.accept(LEVEL3SWORD);
@@ -110,10 +120,13 @@ public class ItemRegistry {
             event.accept(LEVEL7ITEM);
             event.accept(LEVEL8ITEM);
             event.accept(MedicalBox);
+            event.accept(GazeOfCapital);
+            event.accept(SPIRITUALFOOD);
 //            event.accept(boot_gr);
             event.accept(GravitationalMagneticField);
         }
     }
+
     //初始化调用
     public static void init(IEventBus iEventBus) {
 //        addReg();
