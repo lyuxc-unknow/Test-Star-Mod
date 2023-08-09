@@ -10,6 +10,7 @@
   "item.test_star.alpha_medical_box": "Alpha Medical Box",
   "item.test_star.end_item": "End Item",
   "item.test_star.example_item": "Example Item",
+  "item.test_star.gaze_of_capital": "Gaze of Capital",
   "item.test_star.gravitational_magnetic_field": "Disposable gravity magnetic field",
   "item.test_star.level_eight_item": "Level 8 Item",
   "item.test_star.level_eight_sword": "Level 8 Sword",
@@ -28,6 +29,7 @@
   "item.test_star.level_two_item": "Level 2 Item",
   "item.test_star.level_two_sword": "Level 2 Sword",
   "item.test_star.my_sword": "My Sword",
+  "item.test_star.spiritual_food": "Spiritual Food",
   "item.test_star.water_getter": "Water Getter",
   "itemGroup.test_star": "Test Star Creative Tab",
   "star.chat.disable.command": "§4Command disable"

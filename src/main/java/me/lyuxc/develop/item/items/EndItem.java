@@ -19,13 +19,15 @@ public class EndItem extends Item {
 
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand UsedHand) {
-        if(player instanceof ServerPlayer serverPlayer) {
+        if (player instanceof ServerPlayer serverPlayer) {
             //设置玩家模式
             serverPlayer.setGameMode(GameType.CREATIVE);
-            //动画
-            Minecraft.getInstance().gameRenderer.displayItemActivation(ItemRegistry.END_ITEM.get().getDefaultInstance());
             //设置玩家手上的物品为空
             player.setItemInHand(UsedHand, ItemStack.EMPTY);
+            if (player.level().isClientSide()) {
+                //动画
+                Minecraft.getInstance().gameRenderer.displayItemActivation(ItemRegistry.END_ITEM.get().getDefaultInstance());
+            }
         }
         return super.use(level, player, UsedHand);
     }
