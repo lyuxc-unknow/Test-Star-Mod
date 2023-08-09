@@ -1,4 +1,5 @@
 {
+  "attribute.name.generic.attack_damage": "§2Attack Damage",
   "block.test_star.example_block": "Example Block",
   "block.test_star.star_block": "Star Block",
   "chat.creative": "Creative",
@@ -32,5 +33,6 @@
   "item.test_star.spiritual_food": "Spiritual Food",
   "item.test_star.water_getter": "Water Getter",
   "itemGroup.test_star": "Test Star Creative Tab",
-  "star.chat.disable.command": "§4Command disable"
+  "star.chat.disable.command": "§4Command disable",
+  "ts.attribute.attack_damage": "§2 Infinity %s"
 }

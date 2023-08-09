@@ -51,5 +51,7 @@ public class langEnUs extends LanguageProvider {
         add("chat.survival", "Survival");
         add("chat.spectator", "Spectator");
         add("chat.key", "Please provide the key");
+        add("ts.attribute.attack_damage", "§2 Infinity %s");
+        add("attribute.name.generic.attack_damage", "§2Attack Damage");
     }
 }

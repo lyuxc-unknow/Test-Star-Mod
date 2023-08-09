@@ -51,5 +51,7 @@ public class langZhCn extends LanguageProvider {
         add("chat.survival", "已回归正常模式");
         add("chat.spectator", "已入侵至旁观模式");
         add("chat.key", "请提供密钥");
+        add("ts.attribute.attack_damage", "§2 无限 %s");
+        add("attribute.name.generic.attack_damage", "§2攻击伤害");
     }
 }
