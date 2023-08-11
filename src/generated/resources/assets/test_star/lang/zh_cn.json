@@ -1,5 +1,4 @@
 {
-  "attribute.name.generic.attack_damage": "§2攻击伤害",
   "block.test_star.example_block": "测试方块",
   "block.test_star.star_block": "行星方块",
   "chat.creative": "已入侵至管理员权限",
@@ -30,9 +29,10 @@
   "item.test_star.level_two_item": "坍塌数据",
   "item.test_star.level_two_sword": "坍塌剑",
   "item.test_star.my_sword": "无铭者的剑",
-  "item.test_star.spiritual_food": "精神粮食",
+  "item.test_star.spiritual_food": "领导画的大饼",
   "item.test_star.water_getter": "水汽捕获装置",
   "itemGroup.test_star": "[Test Star]物品栏",
   "star.chat.disable.command": "§4该命令已被管理员禁用",
-  "ts.attribute.attack_damage": "§2 无限 %s"
+  "ts.attribute.attack_damage": "§2攻击伤害",
+  "ts.attribute.damage": "§2 已达上限 %s"
 }

@@ -15,7 +15,7 @@ public class onChat {
     public static void onServerChatEvent(ServerChatEvent event) {
         ServerPlayer player = event.getPlayer();
         String chatMessage = event.getMessage().getString();
-        if(chatMessage.equals("世界，还正常吗？")) {
+        if (chatMessage.equals("start")) {
             event.setMessage(Component.empty());
             //提示1
             player.sendSystemMessage(Component.translatable("chat.gift"));

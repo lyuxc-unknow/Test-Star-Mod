@@ -16,7 +16,7 @@ public class onItemToolTip {
         if (event.getItemStack().getItem() instanceof MySword) {
             for (int x = 0; x < event.getToolTip().size(); x++) {
                 if (event.getToolTip().get(x).contains(Component.translatable("attribute.name.generic.attack_damage")) || event.getToolTip().get(x).contains(Component.literal("Attack Damage"))) {
-                    event.getToolTip().set(x, Component.translatable("ts.attribute.attack_damage", Component.translatable("attribute.name.generic.attack_damage")));
+                    event.getToolTip().set(x, Component.translatable("ts.attribute.damage", Component.translatable("ts.attribute.attack_damage")));
                 }
             }
         }
