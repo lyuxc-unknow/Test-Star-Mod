@@ -15,8 +15,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
+@Deprecated
 public class ArmorBoot extends ArmorItem {
-    public ArmorBoot( Properties pProperties) {
+    public ArmorBoot(Properties pProperties) {
         super(new ArmorMaterial() {
             @Override
             public int getDurabilityForType(@NotNull Type pType) {
@@ -59,6 +60,8 @@ public class ArmorBoot extends ArmorItem {
             }
         }, Type.BOOTS, pProperties);
     }
+
+    @Deprecated
     public static class Boots extends ArmorBoot {
         public Boots(Properties pProperties) {
             super(pProperties);
