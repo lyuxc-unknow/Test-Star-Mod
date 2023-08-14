@@ -38,7 +38,12 @@ public class langEnUs extends LanguageProvider {
         add(ItemRegistry.END_ITEM.get(), "End Item");
         add(ItemRegistry.GravitationalMagneticField.get(), "Disposable gravity magnetic field");
         add(ItemRegistry.GazeOfCapital.get(), "Gaze of Capital");
-        add(ItemRegistry.SPIRITUALFOOD.get(), "Spiritual Food");
+        add(ItemRegistry.SPIRITUAL_FOOD.get(), "Spiritual Food");
+        add(ItemRegistry.MOD_BLOCK_MEDIUM.get(), "Mod Block:Medium");
+        add(ItemRegistry.MOD_BLOCK_DATA.get(), "Mod Block:Data");
+        add(ItemRegistry.MOD_BLOCK_DREAM.get(), "Mod Block:Dream");
+        add(ItemRegistry.MOD_BLOCK_METAL.get(), "Mod Block:Metal");
+        add(ItemRegistry.MOD_BLOCK_LIQUID.get(), "Mod Block:Liquid");
         //方块
         add(BlockRegistry.EXAMPLE_BLOCK_ITEM.get(), "Example Block");
         add(BlockRegistry.STAR_BLOCK_ITEM.get(), "Star Block");

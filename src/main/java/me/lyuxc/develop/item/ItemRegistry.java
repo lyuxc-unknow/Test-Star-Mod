@@ -78,7 +78,7 @@ public class ItemRegistry {
             .stacksTo(1)
     ));
     //精神粮食
-    public static final RegistryObject<Item> SPIRITUALFOOD = ITEMS.register("spiritual_food", () -> new SpiritualFood(new Item.Properties()
+    public static final RegistryObject<Item> SPIRITUAL_FOOD = ITEMS.register("spiritual_food", () -> new SpiritualFood(new Item.Properties()
             .stacksTo(16)
             .food(new FoodProperties.Builder()
                     .alwaysEat()
@@ -86,6 +86,16 @@ public class ItemRegistry {
                     .build()
             )
     ));
+    //数据模组块 -- 数据
+    public static final RegistryObject<Item> MOD_BLOCK_DATA = ITEMS.register("mod_block_data", () -> new Item(new Item.Properties()));
+    //数据模组块 -- 流体
+    public static final RegistryObject<Item> MOD_BLOCK_LIQUID = ITEMS.register("mod_block_liquid", () -> new Item(new Item.Properties()));
+    //数据模组块 -- 介质
+    public static final RegistryObject<Item> MOD_BLOCK_MEDIUM = ITEMS.register("mod_block_medium", () -> new Item(new Item.Properties()));
+    //数据模组块 -- 金属
+    public static final RegistryObject<Item> MOD_BLOCK_METAL = ITEMS.register("mod_block_metal", () -> new Item(new Item.Properties()));
+    //数据模组块 -- 梦境
+    public static final RegistryObject<Item> MOD_BLOCK_DREAM = ITEMS.register("mod_block_dream", () -> new Item(new Item.Properties()));
     //废案 -- 重力靴
 //    public static final RegistryObject<Item> boot_gr = ITEMS.register("boot_gr", () -> new ArmorBoot.Boots(new Item.Properties()));
 
@@ -122,9 +132,14 @@ public class ItemRegistry {
             event.accept(LEVEL8ITEM);
             event.accept(MedicalBox);
             event.accept(GazeOfCapital);
-            event.accept(SPIRITUALFOOD);
-//            event.accept(boot_gr);
+            event.accept(SPIRITUAL_FOOD);
             event.accept(GravitationalMagneticField);
+            event.accept(MOD_BLOCK_DATA);
+            event.accept(MOD_BLOCK_DREAM);
+            event.accept(MOD_BLOCK_LIQUID);
+            event.accept(MOD_BLOCK_MEDIUM);
+            event.accept(MOD_BLOCK_METAL);
+//            event.accept(boot_gr);
         }
     }
 

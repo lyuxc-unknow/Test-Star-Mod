@@ -42,6 +42,11 @@ public class ItemModelDataGeneration extends ItemModelProvider {
         basicItem(ItemRegistry.END_ITEM.get());
         basicItem(ItemRegistry.GravitationalMagneticField.get());
         basicItem(ItemRegistry.GazeOfCapital.get());
-        basicItem(ItemRegistry.SPIRITUALFOOD.get());
+        basicItem(ItemRegistry.SPIRITUAL_FOOD.get());
+        basicItem(ItemRegistry.MOD_BLOCK_MEDIUM.get());
+        basicItem(ItemRegistry.MOD_BLOCK_DATA.get());
+        basicItem(ItemRegistry.MOD_BLOCK_DREAM.getId());
+        basicItem(ItemRegistry.MOD_BLOCK_LIQUID.getId());
+        basicItem(ItemRegistry.MOD_BLOCK_METAL.get());
     }
 }

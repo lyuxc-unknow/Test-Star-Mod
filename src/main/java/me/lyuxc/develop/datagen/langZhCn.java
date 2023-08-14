@@ -38,7 +38,12 @@ public class langZhCn extends LanguageProvider {
         add(ItemRegistry.END_ITEM.get(), "相饰位面");
         add(ItemRegistry.GravitationalMagneticField.get(), "一次性重力磁场");
         add(ItemRegistry.GazeOfCapital.get(), "资本的目光");
-        add(ItemRegistry.SPIRITUALFOOD.get(), "精神粮食");
+        add(ItemRegistry.SPIRITUAL_FOOD.get(), "精神粮食");
+        add(ItemRegistry.MOD_BLOCK_MEDIUM.get(), "模组数据块：介质");
+        add(ItemRegistry.MOD_BLOCK_DATA.get(), "模组数据块：数据");
+        add(ItemRegistry.MOD_BLOCK_DREAM.get(), "模组数据块：梦境");
+        add(ItemRegistry.MOD_BLOCK_METAL.get(), "模组数据块：金属");
+        add(ItemRegistry.MOD_BLOCK_LIQUID.get(), "模组数据块：流体");
         //方块
         add(BlockRegistry.EXAMPLE_BLOCK_ITEM.get(), "测试方块");
         add(BlockRegistry.STAR_BLOCK_ITEM.get(), "行星方块");
