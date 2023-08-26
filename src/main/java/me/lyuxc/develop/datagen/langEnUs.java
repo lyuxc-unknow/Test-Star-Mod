@@ -44,6 +44,8 @@ public class langEnUs extends LanguageProvider {
         add(ItemRegistry.MOD_BLOCK_DREAM.get(), "Mod Block:Dream");
         add(ItemRegistry.MOD_BLOCK_METAL.get(), "Mod Block:Metal");
         add(ItemRegistry.MOD_BLOCK_LIQUID.get(), "Mod Block:Liquid");
+        add(ItemRegistry.TETANUS_BLADE.get(), "Tetanus Blade");
+        add(ItemRegistry.LIGHT_AR.get(), "Thunder Scepter");
         //方块
         add(BlockRegistry.EXAMPLE_BLOCK_ITEM.get(), "Example Block");
         add(BlockRegistry.STAR_BLOCK_ITEM.get(), "Star Block");
@@ -58,5 +60,6 @@ public class langEnUs extends LanguageProvider {
         add("chat.key", "Please provide the key");
         add("ts.attribute.damage", "§2 Max %s");
         add("ts.attribute.attack_damage", "§2Attack Damage");
+        add("ts.top.block.hardness", "Block Hardness %s");
     }
 }

@@ -16,6 +16,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Base64;
+import java.util.Random;
 
 @Mod("test_star")
 public class Star {
@@ -36,6 +37,7 @@ public class Star {
             "gamemode", "give", "attribute", "advancement", "difficulty", "effect", "fill", "gamerule",
             "item", "loot", "place", "setblock", "summon", "teleport", "tp", "weather", "xp"
     };
+    public static Random random = new Random(114514);
 
     //新建 - 创造物品栏
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);

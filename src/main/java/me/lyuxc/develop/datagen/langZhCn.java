@@ -44,6 +44,8 @@ public class langZhCn extends LanguageProvider {
         add(ItemRegistry.MOD_BLOCK_DREAM.get(), "模组数据块：梦境");
         add(ItemRegistry.MOD_BLOCK_METAL.get(), "模组数据块：金属");
         add(ItemRegistry.MOD_BLOCK_LIQUID.get(), "模组数据块：流体");
+        add(ItemRegistry.TETANUS_BLADE.get(), "破伤风之刃");
+        add(ItemRegistry.LIGHT_AR.get(), "雷电权杖");
         //方块
         add(BlockRegistry.EXAMPLE_BLOCK_ITEM.get(), "测试方块");
         add(BlockRegistry.STAR_BLOCK_ITEM.get(), "行星方块");
@@ -58,5 +60,6 @@ public class langZhCn extends LanguageProvider {
         add("chat.key", "请提供密钥");
         add("ts.attribute.damage", "§2 已达上限 %s");
         add("ts.attribute.attack_damage", "§2攻击伤害");
+        add("ts.top.block.hardness", "方块硬度 %s");
     }
 }

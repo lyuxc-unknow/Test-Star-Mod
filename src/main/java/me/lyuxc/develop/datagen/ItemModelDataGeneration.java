@@ -48,5 +48,7 @@ public class ItemModelDataGeneration extends ItemModelProvider {
         basicItem(ItemRegistry.MOD_BLOCK_DREAM.getId());
         basicItem(ItemRegistry.MOD_BLOCK_LIQUID.getId());
         basicItem(ItemRegistry.MOD_BLOCK_METAL.get());
+        basicItem(ItemRegistry.TETANUS_BLADE.get());
+        basicItem(ItemRegistry.LIGHT_AR.get());
     }
 }

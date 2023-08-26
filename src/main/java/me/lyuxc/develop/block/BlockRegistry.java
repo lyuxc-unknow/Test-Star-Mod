@@ -19,21 +19,22 @@ public class BlockRegistry {
     //物品注册
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Star.MOD_ID);
     //方块物品注册
-    public static final DeferredRegister<BlockEntityType<?>> ITEM_DEFERRED_REGISTER = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES,Star.MOD_ID);
+    public static final DeferredRegister<BlockEntityType<?>> ITEM_DEFERRED_REGISTER = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Star.MOD_ID);
     //添加方块
     public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCK_DEFERRED_REGISTER.register("example_block", () -> new Block(BlockBehaviour.Properties.of()
             .mapColor(MapColor.STONE)
             .strength(5)
     ));
-    public static final RegistryObject<Block> STAR_BLOCK = BLOCK_DEFERRED_REGISTER.register("star_block",() -> new Block(BlockBehaviour.Properties.of()
+    public static final RegistryObject<Block> STAR_BLOCK = BLOCK_DEFERRED_REGISTER.register("star_block", () -> new Block(BlockBehaviour.Properties.of()
             .mapColor(MapColor.STONE)
-            .strength(5)
+            .requiresCorrectToolForDrops()
+            .strength(100.0F, 1024.0F)
     ));
     //方块物品
     public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
-    public static final RegistryObject<Item> STAR_BLOCK_ITEM = ITEMS.register("star_block",() -> new  BlockItem(STAR_BLOCK.get(),new Item.Properties()));
+    public static final RegistryObject<Item> STAR_BLOCK_ITEM = ITEMS.register("star_block", () -> new BlockItem(STAR_BLOCK.get(), new Item.Properties()));
 
-//    //注册方块类数组
+    //    //注册方块类数组
 //    static String[] blocks_id = new String[]{
 //            "star_block"
 //    };
@@ -47,11 +48,12 @@ public class BlockRegistry {
 //    }
     //添加到创造物品栏
     public static void addCreativeTab(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTab() == Star.STAR_TAB.get()) {
+        if (event.getTab() == Star.STAR_TAB.get()) {
             event.accept(EXAMPLE_BLOCK);
             event.accept(STAR_BLOCK);
         }
     }
+
     //初始化调用
     public static void init(IEventBus iEventBus) {
 //        addReg();
