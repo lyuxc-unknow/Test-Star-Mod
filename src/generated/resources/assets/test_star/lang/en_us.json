@@ -42,5 +42,6 @@
   "star.chat.disable.command": "§4Command disable",
   "ts.attribute.attack_damage": "§2Attack Damage",
   "ts.attribute.damage": "§2 Max %s",
+  "ts.attribute.damage_tetanus_blade": "§2 0 %s",
   "ts.top.block.hardness": "Block Hardness %s"
 }

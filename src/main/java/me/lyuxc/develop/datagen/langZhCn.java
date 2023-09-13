@@ -61,5 +61,6 @@ public class langZhCn extends LanguageProvider {
         add("ts.attribute.damage", "§2 已达上限 %s");
         add("ts.attribute.attack_damage", "§2攻击伤害");
         add("ts.top.block.hardness", "方块硬度 %s");
+        add("ts.attribute.damage_tetanus_blade", "§2 不可估量 %s");
     }
 }

@@ -61,5 +61,6 @@ public class langEnUs extends LanguageProvider {
         add("ts.attribute.damage", "§2 Max %s");
         add("ts.attribute.attack_damage", "§2Attack Damage");
         add("ts.top.block.hardness", "Block Hardness %s");
+        add("ts.attribute.damage_tetanus_blade", "§2 0 %s");
     }
 }
