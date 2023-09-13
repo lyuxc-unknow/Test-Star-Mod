@@ -1,6 +1,7 @@
 package me.lyuxc.develop.block;
 
 import me.lyuxc.develop.Star;
+import me.lyuxc.develop.block.blocks.FanBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -30,9 +31,15 @@ public class BlockRegistry {
             .requiresCorrectToolForDrops()
             .strength(100.0F, 1024.0F)
     ));
+    public static final RegistryObject<Block> FAN_BLOCK = BLOCK_DEFERRED_REGISTER.register("fan_block", () -> new FanBlock(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.STONE)
+            .requiresCorrectToolForDrops()
+            .strength(100.0F, 1024.0F)
+    ));
     //方块物品
     public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<Item> STAR_BLOCK_ITEM = ITEMS.register("star_block", () -> new BlockItem(STAR_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> FAN_BLOCK_ITEM = ITEMS.register("fan_block", () -> new BlockItem(FAN_BLOCK.get(), new Item.Properties()));
 
     //    //注册方块类数组
 //    static String[] blocks_id = new String[]{
@@ -51,6 +58,7 @@ public class BlockRegistry {
         if (event.getTab() == Star.STAR_TAB.get()) {
             event.accept(EXAMPLE_BLOCK);
             event.accept(STAR_BLOCK);
+            event.accept(FAN_BLOCK);
         }
     }
 
