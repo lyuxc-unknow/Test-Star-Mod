@@ -22,6 +22,7 @@ public class FanBlock extends Block {
         if (pEntity instanceof Player player) {
             player.addEffect(new MobEffectInstance(MobEffects.JUMP, TimeToTickUtil.getTime(3), 10, false, false));
         } else {
+//            pEntity.moveTo(pEntity.getX(), pEntity.getY() + Star.random.nextInt(50), pEntity.getZ());
             pEntity.moveTo(pEntity.getX(), pEntity.getY() + Star.random.nextInt(50), pEntity.getZ());
         }
         super.stepOn(pLevel, pPos, pState, pEntity);

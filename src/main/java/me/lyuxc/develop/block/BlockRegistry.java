@@ -41,7 +41,7 @@ public class BlockRegistry {
     public static final RegistryObject<Item> STAR_BLOCK_ITEM = ITEMS.register("star_block", () -> new BlockItem(STAR_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<Item> FAN_BLOCK_ITEM = ITEMS.register("fan_block", () -> new BlockItem(FAN_BLOCK.get(), new Item.Properties()));
 
-    //    //注册方块类数组
+    //        //注册方块类数组
 //    static String[] blocks_id = new String[]{
 //            "star_block"
 //    };
