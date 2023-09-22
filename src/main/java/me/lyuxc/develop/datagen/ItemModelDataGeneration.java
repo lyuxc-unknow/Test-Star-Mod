@@ -18,6 +18,7 @@ public class ItemModelDataGeneration extends ItemModelProvider {
         //方块模型继承方块状态
         withExistingParent(BlockRegistry.EXAMPLE_BLOCK.getId().getPath(), modLoc("block/example_block"));
         withExistingParent(BlockRegistry.STAR_BLOCK.getId().getPath(), modLoc("block/star_block"));
+        withExistingParent(BlockRegistry.FAN_BLOCK.getId().getPath(), modLoc("block/fan_block"));
         //基础物品注册
         basicItem(ItemRegistry.LEVEL1SWORD.getId());
         basicItem(ItemRegistry.LEVEL2SWORD.getId());
@@ -50,5 +51,6 @@ public class ItemModelDataGeneration extends ItemModelProvider {
         basicItem(ItemRegistry.MOD_BLOCK_METAL.get());
         basicItem(ItemRegistry.TETANUS_BLADE.get());
         basicItem(ItemRegistry.LIGHT_AR.get());
+        basicItem(ItemRegistry.MultiPlayerTool.get());
     }
 }

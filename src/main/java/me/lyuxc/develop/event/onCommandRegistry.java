@@ -22,7 +22,7 @@ public class onCommandRegistry {
                     ServerLevel level = context.getSource().getLevel();
                     assert player != null;
                     if (!level.isClientSide) {
-                        player.sendSystemMessage(Component.literal("该功能多人不可用,原因：暂未解决数据服务端与客户端互通问题"));
+                        player.sendSystemMessage(Component.translatable("ts.command.jrrp.multiplayer.tip"));
                         return 0;
                     }
                     if (player.getPersistentData().get("jrrpLaseTime") == null) {
@@ -34,7 +34,7 @@ public class onCommandRegistry {
                         int val = Star.Random_Day.nextInt(101);
                         player.getPersistentData().putString("jrrp", String.valueOf(val));
                     }
-                    player.sendSystemMessage(Component.literal("今天的幸运值为：" + player.getPersistentData().get("jrrp")));
+                    player.sendSystemMessage(Component.translatable("ts.command.jrrp", player.getPersistentData().get("jrrp")));
                     //TODO Server Sync
                     System.out.println(Star.calendar.get(Calendar.DAY_OF_YEAR));
                     return 0;

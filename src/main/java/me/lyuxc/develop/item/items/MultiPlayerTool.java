@@ -25,7 +25,7 @@ public class MultiPlayerTool extends Item {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        pPlayer.sendSystemMessage(Component.literal("多人游戏已解锁，请重启游戏"));
+        pPlayer.sendSystemMessage(Component.translatable("ts.multiplayer_tool.tip"));
         return super.use(pLevel, pPlayer, pUsedHand);
     }
 }

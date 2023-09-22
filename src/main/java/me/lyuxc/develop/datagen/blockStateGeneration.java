@@ -15,5 +15,6 @@ public class blockStateGeneration extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlock(BlockRegistry.EXAMPLE_BLOCK.get());
         simpleBlock(BlockRegistry.STAR_BLOCK.get());
+        simpleBlock(BlockRegistry.FAN_BLOCK.get());
     }
 }

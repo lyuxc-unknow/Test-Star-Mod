@@ -1,5 +1,6 @@
 {
   "block.test_star.example_block": "测试方块",
+  "block.test_star.fan_block": "拟态·风扇",
   "block.test_star.star_block": "行星方块",
   "chat.creative": "已入侵至管理员权限",
   "chat.gift": "<System>被侵蚀的剑已给与开发者",
@@ -34,6 +35,7 @@
   "item.test_star.mod_block_liquid": "模组数据块：流体",
   "item.test_star.mod_block_medium": "模组数据块：介质",
   "item.test_star.mod_block_metal": "模组数据块：金属",
+  "item.test_star.multiplayer_tool": "多玩家解锁工具",
   "item.test_star.my_sword": "无铭者的剑",
   "item.test_star.spiritual_food": "精神粮食",
   "item.test_star.tetanus_blade": "破伤风之刃",
@@ -43,5 +45,10 @@
   "ts.attribute.attack_damage": "§2攻击伤害",
   "ts.attribute.damage": "§2 已达上限 %s",
   "ts.attribute.damage_tetanus_blade": "§2 不可估量 %s",
+  "ts.command.jrrp": "今天的幸运值为: %s",
+  "ts.command.jrrp.multiplayer.tip": "该功能多人不可用,原因：暂未解决数据服务端与客户端互通问题",
+  "ts.multiplayer.disable": "多人游戏目前被禁用！",
+  "ts.multiplayer_tool.tip": "多人游戏已解锁，请重启游戏",
+  "ts.sword.tip.two": "攻击时，被攻击者会受到相对于攻击者一半的伤害，同时随机回复攻击者一定的血量",
   "ts.top.block.hardness": "方块硬度 %s"
 }

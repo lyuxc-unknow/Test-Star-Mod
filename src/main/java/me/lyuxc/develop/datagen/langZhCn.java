@@ -46,9 +46,11 @@ public class langZhCn extends LanguageProvider {
         add(ItemRegistry.MOD_BLOCK_LIQUID.get(), "模组数据块：流体");
         add(ItemRegistry.TETANUS_BLADE.get(), "破伤风之刃");
         add(ItemRegistry.LIGHT_AR.get(), "雷电权杖");
+        add(ItemRegistry.MultiPlayerTool.get(), "多玩家解锁工具");
         //方块
         add(BlockRegistry.EXAMPLE_BLOCK_ITEM.get(), "测试方块");
         add(BlockRegistry.STAR_BLOCK_ITEM.get(), "行星方块");
+        add(BlockRegistry.FAN_BLOCK.get(), "拟态·风扇");
         //自定义
         add("itemGroup.test_star", "[Test Star]物品栏");
         add("star.chat.disable.command", "§4该命令已被管理员禁用");
@@ -62,5 +64,10 @@ public class langZhCn extends LanguageProvider {
         add("ts.attribute.attack_damage", "§2攻击伤害");
         add("ts.top.block.hardness", "方块硬度 %s");
         add("ts.attribute.damage_tetanus_blade", "§2 不可估量 %s");
+        add("ts.command.jrrp.multiplayer.tip", "该功能多人不可用,原因：暂未解决数据服务端与客户端互通问题");
+        add("ts.command.jrrp", "今天的幸运值为: %s");
+        add("ts.sword.tip.two", "攻击时，被攻击者会受到相对于攻击者一半的伤害，同时随机回复攻击者一定的血量");
+        add("ts.multiplayer_tool.tip", "多人游戏已解锁，请重启游戏");
+        add("ts.multiplayer.disable", "多人游戏目前被禁用！");
     }
 }

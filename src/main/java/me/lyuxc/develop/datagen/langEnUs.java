@@ -46,9 +46,11 @@ public class langEnUs extends LanguageProvider {
         add(ItemRegistry.MOD_BLOCK_LIQUID.get(), "Mod Block:Liquid");
         add(ItemRegistry.TETANUS_BLADE.get(), "Tetanus Blade");
         add(ItemRegistry.LIGHT_AR.get(), "Thunder Scepter");
+        add(ItemRegistry.MultiPlayerTool.get(), "MultiPlayer Tool");
         //方块
         add(BlockRegistry.EXAMPLE_BLOCK_ITEM.get(), "Example Block");
         add(BlockRegistry.STAR_BLOCK_ITEM.get(), "Star Block");
+        add(BlockRegistry.FAN_BLOCK.get(), "Fan Block");
         //自定义
         add("itemGroup.test_star", "Test Star Creative Tab");
         add("star.chat.disable.command", "§4Command disable");
@@ -62,5 +64,10 @@ public class langEnUs extends LanguageProvider {
         add("ts.attribute.attack_damage", "§2Attack Damage");
         add("ts.top.block.hardness", "Block Hardness %s");
         add("ts.attribute.damage_tetanus_blade", "§2 0 %s");
+        add("ts.command.jrrp.multiplayer.tip", "This function is not available to multiple people. Reason: The problem of interoperability between the data server and the client has not yet been solved.");
+        add("ts.command.jrrp", "Today’s lucky value is: %s");
+        add("ts.sword.tip.two", "When attacking, the attacked person will take half the damage as compared to the attacker, and at the same time, a certain amount of HP will be restored to the attacker randomly.");
+        add("ts.multiplayer_tool.tip", "Multiplayer game has been unlocked, please restart the game");
+        add("ts.multiplayer.disable", "Multiplayer Disable");
     }
 }

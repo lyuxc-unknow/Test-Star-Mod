@@ -27,7 +27,7 @@ public class onItemToolTip {
                     event.getToolTip().set(x, Component.translatable("ts.attribute.damage_tetanus_blade", Component.translatable("ts.attribute.attack_damage")));
                 }
             }
-            event.getToolTip().add(event.getToolTip().size() - 5, Component.literal("攻击时，被攻击者会受到相对于攻击者一半的伤害，同时随机回复攻击者一定的血量"));
+            event.getToolTip().add(event.getToolTip().size() - 5, Component.translatable("ts.sword.tip.two"));
         }
     }
 }
