@@ -6,7 +6,10 @@
   "mixins": [
   ],
   "client": [
-    "removeMultiPlayer"
+    "removeMultiPlayer",
+    "disableExperimentus.MixinPrimaryLevelData",
+    "disableExperimentus.MixinWorldListEntity",
+    "disableExperimentus.MixinWorldOpenFlows"
   ],
   "injectors": {
     "defaultRequire": 1

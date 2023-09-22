@@ -119,11 +119,14 @@ tasks.named('jar', Jar).configure {
                 'Implementation-Version'  : project.jar.archiveVersion,
                 'Implementation-Vendor'   : mod_authors,
                 'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                "MixinConfigs"            : "test_star.mixins.json"
+                "MixinConfigs"            : "test_star.mixins.json",
+                "TweakClass"              : "org.spongepowered.asm.launch.MixinTweaker",
+                "Tweakorder"              : "0",
+                "ForceLoadAsMod"          : "true"
         ])
     }
 
-    //finalizedBy 'reobfJar'
+    finalizedBy 'reobfJar'
 }
 
 publishing {
