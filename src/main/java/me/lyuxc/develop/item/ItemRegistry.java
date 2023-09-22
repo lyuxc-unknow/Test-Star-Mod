@@ -100,6 +100,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> TETANUS_BLADE = ITEMS.register("tetanus_blade", () -> new TetanusBlade(new Item.Properties()));
     //雷电权杖
     public static final RegistryObject<Item> LIGHT_AR = ITEMS.register("light_ar", () -> new Light(new Item.Properties()));
+    public static final RegistryObject<Item> MultiPlayerTool = ITEMS.register("multiplayer_tool", () -> new MultiPlayerTool(new Item.Properties()));
     //废案 -- 重力靴
 //    public static final RegistryObject<Item> boot_gr = ITEMS.register("boot_gr", () -> new ArmorBoot.Boots(new Item.Properties()));
 
@@ -145,6 +146,7 @@ public class ItemRegistry {
             event.accept(MOD_BLOCK_METAL);
             event.accept(TETANUS_BLADE);
             event.accept(LIGHT_AR);
+            event.accept(MultiPlayerTool);
 //            event.accept(boot_gr);
         }
     }

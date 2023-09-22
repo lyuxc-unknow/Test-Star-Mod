@@ -4,29 +4,24 @@ import me.lyuxc.develop.block.BlockRegistry;
 import me.lyuxc.develop.compat.theoneprobe.TOPRegister;
 import me.lyuxc.develop.datagen.DataGeneration;
 import me.lyuxc.develop.item.ItemRegistry;
+import me.lyuxc.develop.network.Channel;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.network.NetworkRegistry;
-import net.minecraftforge.network.simple.SimpleChannel;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.function.BiConsumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 @Mod("test_star")
 public class Star {
@@ -50,6 +45,10 @@ public class Star {
     public static Random random = new Random(System.currentTimeMillis());
     public static final Calendar calendar = Calendar.getInstance();
     public static Random Random_Day = new Random(calendar.get(Calendar.DAY_OF_YEAR));
+
+    public static String workDir = System.getProperty("user.dir");
+    public static String jrrpDir = workDir + "/config/" + "fml.bin";
+    public static List<String> data = new ArrayList<>();
     //新建 - 创造物品栏
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
     public static final RegistryObject<CreativeModeTab> STAR_TAB = CREATIVE_MODE_TABS.register("star_tab", () -> CreativeModeTab.builder()
@@ -74,42 +73,38 @@ public class Star {
         iEventBus.addListener(DataGeneration::generate);
         //事件注册
         iEventBus.addListener(this::CommonSetupEvent);
+        iEventBus.addListener(this::ClientSetupEvent);
         //事件总线注册
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private static final String PROTOCOL_VERSION = "1";
-    public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MOD_ID, MOD_ID), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
-    private static int messageID = 0;
-
-    public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder, BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
-        PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
-        messageID++;
-    }
-
-    private static final Collection<AbstractMap.SimpleEntry<Runnable, Integer>> workQueue = new ConcurrentLinkedQueue<>();
-
-    public static void queueServerWork(int tick, Runnable action) {
-        workQueue.add(new AbstractMap.SimpleEntry<>(action, tick));
-    }
-
-    @SubscribeEvent
-    public void tick(TickEvent.ServerTickEvent event) {
-        if (event.phase == TickEvent.Phase.END) {
-            List<AbstractMap.SimpleEntry<Runnable, Integer>> actions = new ArrayList<>();
-            workQueue.forEach(work -> {
-                work.setValue(work.getValue() - 1);
-                if (work.getValue() == 0)
-                    actions.add(work);
-            });
-            actions.forEach(e -> e.getKey().run());
-            workQueue.removeAll(actions);
-        }
-    }
-
-
     public void CommonSetupEvent(FMLCommonSetupEvent event) {
         //TOP注册
         TOPRegister.topRegister();
+        Channel.register();
+        Path path = Paths.get(jrrpDir);
+        try {
+            Files.createFile(path);
+        } catch (IOException ignored) {
+
+        }
+    }
+
+    public void ClientSetupEvent(FMLClientSetupEvent event) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(Star.jrrpDir))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                data.add(line);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(Star.jrrpDir))) {
+            if (data.isEmpty()) {
+                writer.write("0100 1101 0111 0101 0110 1100 0111 0100 0110 1001 0111 0000 0110 1100 0110 0001 0111 1001 0110 0101 0111 0010 1110 1111 1011 1100 1001 1010 0011 0000");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

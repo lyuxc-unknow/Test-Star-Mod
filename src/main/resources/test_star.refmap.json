@@ -1,0 +1,7 @@
+{
+  "mappings": {
+    "me.lyuxc.develop/mixins/removeMultiPlayer": {
+      "init()V": "Lnet/minecraft/client/gui/screens;"
+    }
+  }
+}
