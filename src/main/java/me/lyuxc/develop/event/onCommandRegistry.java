@@ -1,17 +1,18 @@
 package me.lyuxc.develop.event;
 
 import me.lyuxc.develop.Star;
-import me.lyuxc.develop.network.Channel;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
 import java.util.Calendar;
 import java.util.Objects;
 
+@Mod.EventBusSubscriber
 public class onCommandRegistry {
     @SubscribeEvent
     public static void register(RegisterCommandsEvent event) {
@@ -27,7 +28,6 @@ public class onCommandRegistry {
                     }
                     if (player.getPersistentData().get("jrrpLaseTime") == null) {
                         player.getPersistentData().putString("jrrpLaseTime", String.valueOf(Star.calendar.get(Calendar.DAY_OF_YEAR)));
-                        Channel.sendToServer(player.getPersistentData());
                     }
                     if (!Objects.requireNonNull(player.getPersistentData().get("jrrpLaseTime")).getAsString().equals(String.valueOf(Star.calendar.get(Calendar.DAY_OF_YEAR)))) {
                         player.getPersistentData().putString("jrrpLaseTime", String.valueOf(Star.calendar.get(Calendar.DAY_OF_YEAR)));

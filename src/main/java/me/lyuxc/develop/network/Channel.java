@@ -1,10 +1,11 @@
 package me.lyuxc.develop.network;
 
 import me.lyuxc.develop.Star;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.network.NetworkRegistry;
-import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.simple.SimpleChannel;
 
 public class Channel {
@@ -23,14 +24,10 @@ public class Channel {
                 .clientAcceptedVersions(s -> true)
                 .serverAcceptedVersions(s -> true)
                 .simpleChannel();
-        
+
     }
 
-    public static <MSG> void sendToServer(MSG message) {
-        INSTANCE.sendToServer(message);
-    }
-
-    public static <MSG> void sendToPlayer(MSG message, ServerPlayer player) {
-        INSTANCE.send(PacketDistributor.PLAYER.with(() -> player), message);
+    public static void syncPlayer(FriendlyByteBuf msg, ServerPlayer player) {
+        INSTANCE.sendTo(msg.copy(), player.connection.connection, NetworkDirection.PLAY_TO_CLIENT);
     }
 }
