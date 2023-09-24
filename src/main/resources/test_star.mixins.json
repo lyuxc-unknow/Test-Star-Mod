@@ -6,6 +6,7 @@
   "mixins": [
   ],
   "client": [
+    "MixinMinecraft",
     "removeMultiPlayer",
     "disableExperimentus.MixinPrimaryLevelData",
     "disableExperimentus.MixinWorldListEntity",

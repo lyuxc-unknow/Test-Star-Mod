@@ -24,7 +24,7 @@ public class Light extends Item {
         if (pLevel instanceof ServerLevel _level) {
             Vec3 playerPos = pPlayer.getEyePosition();
             Entity light = new LightningBolt(EntityType.LIGHTNING_BOLT, _level);
-            light.moveTo(playerPos.x > 0 ? playerPos.x + Star.random.nextInt(5) : playerPos.x - 2, playerPos.y - 1, playerPos.z > 0 ? playerPos.z + Star.random.nextInt(5) : playerPos.z - 2, _level.getRandom().nextFloat() * 360F, 0);
+            light.moveTo(Star.random.nextInt(5) > 2 ? playerPos.x + Star.random.nextInt(5) : playerPos.x - Star.random.nextInt(5), playerPos.y - 1, Star.random.nextInt(5) > 2 ? playerPos.z + Star.random.nextInt(5) : playerPos.z - Star.random.nextInt(5), _level.getRandom().nextFloat() * 360F, 0);
             pLevel.addFreshEntity(light);
         }
         return super.use(pLevel, pPlayer, pUsedHand);

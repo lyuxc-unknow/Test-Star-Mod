@@ -40,5 +40,11 @@ public class onCommandRegistry {
                     return 0;
                 })
         );
+        event.getDispatcher().register(Commands.literal("gc")
+                .executes(context -> {
+                    System.gc();
+                    return 0;
+                })
+        );
     }
 }

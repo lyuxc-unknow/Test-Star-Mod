@@ -54,7 +54,7 @@ minecraft {
 
         client {
             property 'forge.enabledGameTestNamespaces', mod_id
-            args '--username', 'lyuxc_unknow1', '-mixin.config=test_star.mixins.json'
+            args '--username', 'lyuxc_unknow', '-mixin.config=test_star.mixins.json'
         }
 
         server {
