@@ -52,7 +52,7 @@ public class langEnUs extends LanguageProvider {
         add(BlockRegistry.STAR_BLOCK_ITEM.get(), "Star Block");
         add(BlockRegistry.FAN_BLOCK.get(), "Fan Block");
         //自定义
-        add("itemGroup.test_star", "Test Star Creative Tab");
+        add("itemGroup.test_star", "[Mind] Creative Tab");
         add("star.chat.disable.command", "§4Command disable");
         add("chat.gift", "<%s>I need a starter pack");
         add("chat.welcome", "Welcome to the World");

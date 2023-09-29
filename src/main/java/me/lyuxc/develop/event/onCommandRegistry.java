@@ -35,7 +35,6 @@ public class onCommandRegistry {
                         player.getPersistentData().putString("jrrp", String.valueOf(val));
                     }
                     player.sendSystemMessage(Component.translatable("ts.command.jrrp", player.getPersistentData().get("jrrp")));
-                    //TODO Server Sync
                     System.out.println(Star.calendar.get(Calendar.DAY_OF_YEAR));
                     return 0;
                 })

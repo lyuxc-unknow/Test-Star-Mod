@@ -52,7 +52,7 @@ public class langZhCn extends LanguageProvider {
         add(BlockRegistry.STAR_BLOCK_ITEM.get(), "行星方块");
         add(BlockRegistry.FAN_BLOCK.get(), "拟态·风扇");
         //自定义
-        add("itemGroup.test_star", "[Test Star]物品栏");
+        add("itemGroup.test_star", "[Mind]物品栏");
         add("star.chat.disable.command", "§4该命令已被管理员禁用");
         add("chat.gift", "<System>被侵蚀的剑已给与开发者");
         add("chat.welcome", "世界或许依旧，但变化无处不在，开发者，欢迎你！");
