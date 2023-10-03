@@ -100,6 +100,7 @@ public class ItemRegistry {
     public static final RegistryObject<Item> TETANUS_BLADE = ITEMS.register("tetanus_blade", () -> new TetanusBlade(new Item.Properties()));
     //雷电权杖
     public static final RegistryObject<Item> LIGHT_AR = ITEMS.register("light_ar", () -> new Light(new Item.Properties()));
+    //多人模式解锁工具
     public static final RegistryObject<Item> MultiPlayerTool = ITEMS.register("multiplayer_tool", () -> new MultiPlayerTool(new Item.Properties()));
     //废案 -- 重力靴
 //    public static final RegistryObject<Item> boot_gr = ITEMS.register("boot_gr", () -> new ArmorBoot.Boots(new Item.Properties()));

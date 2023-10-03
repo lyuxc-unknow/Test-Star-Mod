@@ -4,7 +4,6 @@ import me.lyuxc.develop.block.BlockRegistry;
 import me.lyuxc.develop.compat.theoneprobe.TOPRegister;
 import me.lyuxc.develop.datagen.DataGeneration;
 import me.lyuxc.develop.item.ItemRegistry;
-import me.lyuxc.develop.network.Channel;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -17,11 +16,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.*;
+import java.util.Base64;
+import java.util.Calendar;
+import java.util.Random;
 
 @Mod("test_star")
 public class Star {
@@ -47,8 +44,8 @@ public class Star {
     public static Random Random_Day = new Random(calendar.get(Calendar.DAY_OF_YEAR));
 
     public static String workDir = System.getProperty("user.dir");
-    public static String jrrpDir = workDir + "/config/" + "fml.bin";
-    public static List<String> data = new ArrayList<>();
+    public static String configDir = workDir + "/config/" + "client2.mind.config";
+    public static String data = "";
     //新建 - 创造物品栏
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
     public static final RegistryObject<CreativeModeTab> STAR_TAB = CREATIVE_MODE_TABS.register("star_tab", () -> CreativeModeTab.builder()
@@ -81,30 +78,9 @@ public class Star {
     public void CommonSetupEvent(FMLCommonSetupEvent event) {
         //TOP注册
         TOPRegister.topRegister();
-        Channel.register();
-        Path path = Paths.get(jrrpDir);
-        try {
-            Files.createFile(path);
-        } catch (IOException ignored) {
-
-        }
     }
 
     public void ClientSetupEvent(FMLClientSetupEvent event) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(Star.jrrpDir))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                data.add(line);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(Star.jrrpDir))) {
-            if (data.isEmpty()) {
-                writer.write("0100 1101 0111 0101 0110 1100 0111 0100 0110 1001 0111 0000 0110 1100 0110 0001 0111 1001 0110 0101 0111 0010 1110 1111 1011 1100 1001 1010 0011 0000");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 }
