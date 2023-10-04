@@ -7,7 +7,7 @@
   ],
   "client": [
     "MixinMinecraft",
-    "removeMultiPlayer",
+    "MixinTitleScreen",
     "disableExperimentus.MixinPrimaryLevelData",
     "disableExperimentus.MixinWorldListEntity",
     "disableExperimentus.MixinWorldOpenFlows"

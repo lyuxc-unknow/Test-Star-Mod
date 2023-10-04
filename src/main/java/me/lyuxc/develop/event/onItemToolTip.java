@@ -2,6 +2,8 @@ package me.lyuxc.develop.event;
 
 import me.lyuxc.develop.item.tools.MySword;
 import me.lyuxc.develop.item.tools.TetanusBlade;
+import me.lyuxc.develop.utils.TextUtils;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -17,7 +19,13 @@ public class onItemToolTip {
         if (event.getItemStack().getItem() instanceof MySword) {
             for (int x = 0; x < event.getToolTip().size(); x++) {
                 if (event.getToolTip().get(x).contains(Component.translatable("attribute.name.generic.attack_damage")) || event.getToolTip().get(x).contains(Component.literal("Attack Damage"))) {
-                    event.getToolTip().set(x, Component.translatable("ts.attribute.damage", Component.translatable("ts.attribute.attack_damage")));
+                    event.getToolTip().set(x,
+                            Component.literal(" ").withStyle(ChatFormatting.BLUE)
+                                    .append(TextUtils.apply(Component.translatable("ts.attribute.damage")))
+                                    .append(" ")
+                                    .append(Component.translatable("ts.attribute.attack_damage")
+                                            .withStyle(ChatFormatting.DARK_GREEN)));
+                    return;
                 }
             }
         }

@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.io.*;
 
 @Mixin(TitleScreen.class)
-public class removeMultiPlayer {
+public class MixinTitleScreen {
     /**
      * @author mojang
      * @reason bug jump

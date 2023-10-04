@@ -10,11 +10,10 @@ import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
 import java.util.Objects;
 
-@Mod.EventBusSubscriber
+@Deprecated
 public class onWorldLoadEvent {
     @SubscribeEvent
     public static void load(EntityJoinLevelEvent event) {
