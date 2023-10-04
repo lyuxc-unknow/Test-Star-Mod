@@ -60,8 +60,7 @@ public class langEnUs extends LanguageProvider {
         add("chat.survival", "Survival");
         add("chat.spectator", "Spectator");
         add("chat.key", "Please provide the key");
-        add("ts.attribute.damage", "§2 Max %s");
-        add("ts.attribute.attack_damage", "§2Attack Damage");
+        add("ts.attribute.damage", "Infinity");
         add("ts.top.block.hardness", "Block Hardness %s");
         add("ts.attribute.damage_tetanus_blade", "§2 0 %s");
         add("ts.command.jrrp.multiplayer.tip", "This function is not available to multiple people. Reason: The problem of interoperability between the data server and the client has not yet been solved.");

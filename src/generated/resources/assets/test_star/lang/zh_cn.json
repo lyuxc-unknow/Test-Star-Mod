@@ -42,7 +42,6 @@
   "item.test_star.water_getter": "水汽捕获装置",
   "itemGroup.test_star": "[Mind]物品栏",
   "star.chat.disable.command": "§4该命令已被管理员禁用",
-  "ts.attribute.attack_damage": "攻击伤害",
   "ts.attribute.damage": "已达上限",
   "ts.attribute.damage_tetanus_blade": "§2 不可估量 %s",
   "ts.command.jrrp": "今天的幸运值为: %s",

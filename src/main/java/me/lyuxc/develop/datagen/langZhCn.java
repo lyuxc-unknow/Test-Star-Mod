@@ -61,7 +61,6 @@ public class langZhCn extends LanguageProvider {
         add("chat.spectator", "已入侵至旁观模式");
         add("chat.key", "请提供密钥");
         add("ts.attribute.damage", "已达上限");
-        add("ts.attribute.attack_damage", "攻击伤害");
         add("ts.top.block.hardness", "方块硬度 %s");
         add("ts.attribute.damage_tetanus_blade", "§2 不可估量 %s");
         add("ts.command.jrrp.multiplayer.tip", "该功能多人不可用,原因：暂未解决数据服务端与客户端互通问题");

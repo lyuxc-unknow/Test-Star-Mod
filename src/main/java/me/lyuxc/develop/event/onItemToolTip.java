@@ -23,8 +23,8 @@ public class onItemToolTip {
                             Component.literal(" ").withStyle(ChatFormatting.BLUE)
                                     .append(TextUtils.apply(Component.translatable("ts.attribute.damage")))
                                     .append(" ")
-                                    .append(Component.translatable("ts.attribute.attack_damage")
-                                            .withStyle(ChatFormatting.DARK_GREEN)));
+                                    .append(TextUtils.applyAllColor(Component.translatable("attribute.name.generic.attack_damage")))
+                                    .withStyle(ChatFormatting.DARK_GREEN));
                     return;
                 }
             }
@@ -32,7 +32,11 @@ public class onItemToolTip {
         if (event.getItemStack().getItem() instanceof TetanusBlade) {
             for (int x = 0; x < event.getToolTip().size(); x++) {
                 if (event.getToolTip().get(x).contains(Component.translatable("attribute.name.generic.attack_damage")) || event.getToolTip().get(x).contains(Component.literal("Attack Damage"))) {
-                    event.getToolTip().set(x, Component.translatable("ts.attribute.damage_tetanus_blade", Component.translatable("ts.attribute.attack_damage")));
+                    event.getToolTip().set(x, Component.literal(" ").withStyle(ChatFormatting.BLUE)
+                            .append(TextUtils.apply(Component.translatable("ts.attribute.damage_tetanus_blade")))
+                            .append(" ")
+                            .append(Component.translatable("attribute.name.generic.attack_damage"))
+                            .withStyle(ChatFormatting.DARK_GREEN));
                 }
             }
             event.getToolTip().add(event.getToolTip().size() - 5, Component.translatable("ts.sword.tip.two"));

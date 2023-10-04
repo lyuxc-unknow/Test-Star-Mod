@@ -20,7 +20,8 @@ public class BlockTools extends BlockTagsProvider {
     protected void addTags(HolderLookup.@NotNull Provider pProvider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(BlockRegistry.EXAMPLE_BLOCK.get())
-                .add(BlockRegistry.STAR_BLOCK.get());
+                .add(BlockRegistry.STAR_BLOCK.get())
+                .add(BlockRegistry.FAN_BLOCK.get());
 //        tag(Tags.Blocks.STORAGE_BLOCKS_NETHERITE).add(BlockRegistry.STAR_BLOCK.get());
     }
 }
