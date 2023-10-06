@@ -102,10 +102,15 @@ public class ItemRegistry {
     public static final RegistryObject<Item> LIGHT_AR = ITEMS.register("light_ar", () -> new Light(new Item.Properties()));
     //多人模式解锁工具
     public static final RegistryObject<Item> MultiPlayerTool = ITEMS.register("multiplayer_tool", () -> new MultiPlayerTool(new Item.Properties()));
-    //废案 -- 重力靴
-//    public static final RegistryObject<Item> boot_gr = ITEMS.register("boot_gr", () -> new ArmorBoot.Boots(new Item.Properties()));
+    //木剑刀
+    public static final RegistryObject<Item> WoodShears = ITEMS.register("wood_shears", () -> new WoodShears(new Item.Properties()
+            .durability(1024)
+    ));
 
-    //    static String[] items_id = new String[] {
+    //    废案 -- 重力靴
+//    public static final RegistryObject<Item> boot_gr = ITEMS.register("boot_gr", () -> new ArmorBoot.Boots(new Item.Properties()));
+//    循环注册
+//    static String[] items_id = new String[] {
 //            "example_item"
 //    };
 //    static void addReg() {
@@ -148,6 +153,7 @@ public class ItemRegistry {
             event.accept(TETANUS_BLADE);
             event.accept(LIGHT_AR);
             event.accept(MultiPlayerTool);
+            event.accept(WoodShears);
 //            event.accept(boot_gr);
         }
     }

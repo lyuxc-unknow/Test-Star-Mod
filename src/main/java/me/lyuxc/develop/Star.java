@@ -9,6 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -39,12 +40,19 @@ public class Star {
             "gamemode", "give", "attribute", "advancement", "difficulty", "effect", "fill", "gamerule",
             "item", "loot", "place", "setblock", "summon", "teleport", "tp", "weather", "xp"
     };
+    //最大模组数
+    public static final int MAX_MOD_COUNT = 200;
+    //随机 - 种子：时间刻
     public static Random random = new Random(System.currentTimeMillis());
+    //日期
     public static final Calendar calendar = Calendar.getInstance();
+    //根据日获取随机种子
     public static Random Random_Day = new Random(calendar.get(Calendar.DAY_OF_YEAR));
-
+    //获取MC运行路径
     public static String workDir = System.getProperty("user.dir");
+    //多人模式配置文件路径
     public static String configDir = workDir + "/config/" + "client2.mind.config";
+    //获取到的数据 - 预留
     public static String data = "";
     //新建 - 创造物品栏
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
@@ -78,9 +86,15 @@ public class Star {
     public void CommonSetupEvent(FMLCommonSetupEvent event) {
         //TOP注册
         TOPRegister.topRegister();
+        //模组加载数量将检测
+        try {
+            if (ModList.get().getMods().size() >= MAX_MOD_COUNT)
+                throw new Exception("Number of Mods loaded exceeds limit");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void ClientSetupEvent(FMLClientSetupEvent event) {
-
     }
 }

@@ -47,6 +47,7 @@ public class langZhCn extends LanguageProvider {
         add(ItemRegistry.TETANUS_BLADE.get(), "破伤风之刃");
         add(ItemRegistry.LIGHT_AR.get(), "雷电权杖");
         add(ItemRegistry.MultiPlayerTool.get(), "多人模式解锁工具");
+        add(ItemRegistry.WoodShears.get(), "纯木剪刀");
         //方块
         add(BlockRegistry.EXAMPLE_BLOCK_ITEM.get(), "测试方块");
         add(BlockRegistry.STAR_BLOCK_ITEM.get(), "行星方块");

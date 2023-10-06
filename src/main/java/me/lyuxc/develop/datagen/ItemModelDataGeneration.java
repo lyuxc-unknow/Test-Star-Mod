@@ -52,5 +52,6 @@ public class ItemModelDataGeneration extends ItemModelProvider {
         basicItem(ItemRegistry.TETANUS_BLADE.get());
         basicItem(ItemRegistry.LIGHT_AR.get());
         basicItem(ItemRegistry.MultiPlayerTool.get());
+        basicItem(ItemRegistry.WoodShears.get());
     }
 }
