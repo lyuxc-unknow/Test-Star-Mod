@@ -43,6 +43,7 @@
   "item.test_star.wood_shears": "Wood Shears",
   "itemGroup.test_star": "[Mind] Creative Tab",
   "star.chat.disable.command": "§4Command disable",
+  "tip.error.out_of_mod_number": "Number of Mods loaded exceeds limit",
   "ts.attribute.damage": "Infinity",
   "ts.attribute.damage_tetanus_blade": "§2 0 %s",
   "ts.command.jrrp": "Today’s lucky value is: %s",

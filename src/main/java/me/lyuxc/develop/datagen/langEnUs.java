@@ -69,5 +69,6 @@ public class langEnUs extends LanguageProvider {
         add("ts.sword.tip.two", "When attacking, the attacked person will take half the damage as compared to the attacker, and at the same time, a certain amount of HP will be restored to the attacker randomly.");
         add("ts.multiplayer_tool.tip", "Multiplayer game has been unlocked, please restart the game");
         add("ts.multiplayer.disable", "Multiplayer Disable");
+        add("tip.error.out_of_mod_number", "Number of Mods loaded exceeds limit");
     }
 }

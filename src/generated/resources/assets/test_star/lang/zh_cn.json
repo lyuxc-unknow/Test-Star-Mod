@@ -43,6 +43,7 @@
   "item.test_star.wood_shears": "纯木剪刀",
   "itemGroup.test_star": "[Mind]物品栏",
   "star.chat.disable.command": "§4该命令已被管理员禁用",
+  "tip.error.out_of_mod_number": "所加载到的模组数量超过上限",
   "ts.attribute.damage": "已达上限",
   "ts.attribute.damage_tetanus_blade": "§2 不可估量 %s",
   "ts.command.jrrp": "今天的幸运值为: %s",

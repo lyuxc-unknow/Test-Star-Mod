@@ -89,7 +89,7 @@ public class Star {
         //模组加载数量将检测
         try {
             if (ModList.get().getMods().size() >= MAX_MOD_COUNT)
-                throw new Exception("Number of Mods loaded exceeds limit");
+                throw new Exception(String.valueOf(Component.translatable("tip.error.out_of_mod_number")));
         } catch (Exception e) {
             e.printStackTrace();
         }

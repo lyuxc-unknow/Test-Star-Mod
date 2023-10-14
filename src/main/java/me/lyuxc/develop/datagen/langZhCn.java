@@ -69,5 +69,6 @@ public class langZhCn extends LanguageProvider {
         add("ts.sword.tip.two", "攻击时，被攻击者会受到相对于攻击者当前血量一半的伤害，同时随机回复攻击者一定的血量");
         add("ts.multiplayer_tool.tip", "多人游戏已解锁，请重启游戏");
         add("ts.multiplayer.disable", "多人游戏目前被禁用！");
+        add("tip.error.out_of_mod_number", "所加载到的模组数量超过上限");
     }
 }
