@@ -11,8 +11,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
-public class BlockTools extends BlockTagsProvider {
-    public BlockTools(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
+public class BlockTag extends BlockTagsProvider {
+    public BlockTag(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, modId, existingFileHelper);
     }
 
@@ -22,6 +22,8 @@ public class BlockTools extends BlockTagsProvider {
                 .add(BlockRegistry.EXAMPLE_BLOCK.get())
                 .add(BlockRegistry.STAR_BLOCK.get())
                 .add(BlockRegistry.FAN_BLOCK.get());
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(BlockRegistry.STAR_BLOCK.get());
 //        tag(Tags.Blocks.STORAGE_BLOCKS_NETHERITE).add(BlockRegistry.STAR_BLOCK.get());
     }
 }

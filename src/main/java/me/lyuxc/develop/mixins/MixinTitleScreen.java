@@ -27,7 +27,6 @@ public class MixinTitleScreen {
             }
             BufferedReader reader = new BufferedReader(new FileReader(file));
             Star.data = reader.readLine();
-            System.out.println(Star.data);
         } catch (Exception e) {
             e.printStackTrace();
         }

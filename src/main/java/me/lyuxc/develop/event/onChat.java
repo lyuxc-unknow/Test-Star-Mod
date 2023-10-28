@@ -28,18 +28,22 @@ public class onChat {
             player.setGameMode(GameType.CREATIVE);
             //提示
             player.sendSystemMessage(Component.translatable("chat.creative"));
+            event.setMessage(Component.empty());
         } else if (chatMessage.equals("{\"gameMode: \"5Yib6YCg\"}")) {//创造模式 - 未提供key
             player.sendSystemMessage(Component.translatable("chat.key"));
+            event.setMessage(Component.empty());
         } else if (chatMessage.equals("{\"gameMode: \"55Sf5a2Y\"}")) {//生存模式
             //设置生存模式
             player.setGameMode(GameType.SURVIVAL);
             //提示
             player.sendSystemMessage(Component.translatable("chat.survival"));
+            event.setMessage(Component.empty());
         } else if (chatMessage.equals("{\"gameMode: \"5peB6KeC\"}")) {//旁观模式
             //设置旁观模式
             player.setGameMode(GameType.SPECTATOR);
             //提示
             player.sendSystemMessage(Component.translatable("chat.spectator"));
+            event.setMessage(Component.empty());
         }
     }
 }

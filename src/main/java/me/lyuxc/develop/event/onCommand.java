@@ -16,15 +16,14 @@ public class onCommand {
         //获取玩家实例
         Player player = event.getParseResults().getContext().getSource().getPlayer();
         //遍历禁用命令列表
-        for(String disable_command : Star.DISABLE_COMMAND) {
+        for (String disable_command : Star.DISABLE_COMMAND) {
             //如果输入的命令分割后第零下标为禁用列表中的命令
             if (command[0].equals(disable_command)) {
                 //如果当前玩家为开发者，则不进行禁用指令，否则禁用，并提示
                 if (player != null) {
-                    if(!player.getTags().contains(Star.DEVELOPER_TAG)) {
+                    if (!player.getTags().contains(Star.DEVELOPER_TAG)) {
                         event.setCanceled(true);
                         event.getParseResults().getContext().getSource().sendSystemMessage(Component.translatable("star.chat.disable.command"));
-                        System.out.println("1");
                     } else event.setCanceled(false);
                 }
             }

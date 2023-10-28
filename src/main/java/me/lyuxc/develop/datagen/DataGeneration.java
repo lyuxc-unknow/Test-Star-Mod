@@ -19,6 +19,6 @@ public class DataGeneration {
         //中文 - 语言生成器
         generator.addProvider(event.includeClient(), new langZhCn(packOutput, "zh_cn"));
         //标签生成器
-        generator.addProvider(event.includeClient(), new BlockTools(packOutput, event.getLookupProvider(), Star.MOD_ID, event.getExistingFileHelper()));
+        generator.addProvider(event.includeClient(), new BlockTag(packOutput, event.getLookupProvider(), Star.MOD_ID, event.getExistingFileHelper()));
     }
 }

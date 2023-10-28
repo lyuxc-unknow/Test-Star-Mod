@@ -4,6 +4,7 @@ import me.lyuxc.develop.block.BlockRegistry;
 import me.lyuxc.develop.compat.theoneprobe.TOPRegister;
 import me.lyuxc.develop.datagen.DataGeneration;
 import me.lyuxc.develop.item.ItemRegistry;
+import me.lyuxc.develop.networks.Channel;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -11,7 +12,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -41,7 +41,7 @@ public class Star {
             "item", "loot", "place", "setblock", "summon", "teleport", "tp", "weather", "xp"
     };
     //最大模组数
-    public static final int MAX_MOD_COUNT = 200;
+    public static final int MAX_MOD_COUNT = 1024;
     //随机 - 种子：时间刻
     public static Random random = new Random(System.currentTimeMillis());
     //日期
@@ -78,7 +78,6 @@ public class Star {
         iEventBus.addListener(DataGeneration::generate);
         //事件注册
         iEventBus.addListener(this::CommonSetupEvent);
-        iEventBus.addListener(this::ClientSetupEvent);
         //事件总线注册
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -86,6 +85,7 @@ public class Star {
     public void CommonSetupEvent(FMLCommonSetupEvent event) {
         //TOP注册
         TOPRegister.topRegister();
+        Channel.register();
         //模组加载数量将检测
         try {
             if (ModList.get().getMods().size() >= MAX_MOD_COUNT)
@@ -93,8 +93,5 @@ public class Star {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public void ClientSetupEvent(FMLClientSetupEvent event) {
     }
 }
