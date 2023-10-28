@@ -4,7 +4,6 @@ import me.lyuxc.develop.block.BlockRegistry;
 import me.lyuxc.develop.compat.theoneprobe.TOPRegister;
 import me.lyuxc.develop.datagen.DataGeneration;
 import me.lyuxc.develop.item.ItemRegistry;
-import me.lyuxc.develop.networks.Channel;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -85,7 +84,6 @@ public class Star {
     public void CommonSetupEvent(FMLCommonSetupEvent event) {
         //TOP注册
         TOPRegister.topRegister();
-        Channel.register();
         //模组加载数量将检测
         try {
             if (ModList.get().getMods().size() >= MAX_MOD_COUNT)
